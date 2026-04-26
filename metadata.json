@@ -1,0 +1,6 @@
+{
+  "name": "Offscript",
+  "description": "An immersive solo travel game. Play a character, complete location-based missions, and rediscover the city through a new lens.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": []
+}
