@@ -18,7 +18,7 @@ export async function generateContentForMood(
   - Amsterdam: Focus on the feeling of being cozy and warm (the local call it "gezellig"), reflection by canals, hidden courtyard gardens, flower markets, and the rhythm of bikes.
   - Rome: Focus on the sweetness of doing nothing, the warmth of sun on old stone, the sound of water fountains, specific types of pasta or gelato, and finding peace in the historic beauty.
   - Barcelona: Focus on the bright Mediterranean light, the playful architecture, the narrow streets of the Gothic Quarter, and the smell of the sea.
-  - Vancouver: Focus on the blend of city and nature, the misty mountains, the seawall walk, local rain-forest vibes, and finding small moments of "daily magic" in the Pacific North West.
+  - Vancouver: Focus on the "daily magic" of home. Seeing the familiar with new eyes. The misty mountains, the seawall, the hidden corners of Stanley Park, or the smell of rain on cedar. Treat home like a new adventure.
 
   Role: You provide a "perspective" or "lens" for the day (e.g., "The Morning Poet", "The Sunset Seeker", "The Coffee Shop Philosopher").
   

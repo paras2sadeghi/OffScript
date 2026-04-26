@@ -26,16 +26,36 @@ import { GameState, Mode, Mood, Mission } from './types';
 import { generateContentForMood } from './services/aiService';
 
 export default function App() {
-  const [state, setState] = useState<GameState>({
-    mode: null,
-    mood: null,
-    location: null,
-    character: null,
-    missions: [],
-    totalXp: 0,
-    earnedBadges: [],
-    step: 'welcome'
+  const [state, setState] = useState<GameState>(() => {
+    const saved = localStorage.getItem('offscript_state');
+    const initial = {
+      mode: null,
+      mood: null,
+      location: null,
+      character: null,
+      missions: [],
+      totalXp: 0,
+      earnedBadges: [],
+      step: 'welcome'
+    };
+    if (saved) {
+      try {
+        const parsed = JSON.parse(saved);
+        return { ...initial, ...parsed, step: 'welcome' };
+      } catch (e) {
+        return initial;
+      }
+    }
+    return initial;
   });
+
+  useEffect(() => {
+    const dataToSave = {
+      earnedBadges: state.earnedBadges,
+      totalXp: state.totalXp
+    };
+    localStorage.setItem('offscript_state', JSON.stringify(dataToSave));
+  }, [state.earnedBadges, state.totalXp]);
 
   const [loadingText, setLoadingText] = useState('Finding your path...');
   const [activeMission, setActiveMission] = useState<Mission | null>(null);
