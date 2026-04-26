@@ -232,7 +232,7 @@ export default function App() {
               <h2 className="text-3xl font-heading font-black text-stone-900 mb-2">WHERE ARE WE?</h2>
               <p className="text-sm text-stone-500 mb-10 font-medium">Select your current city adventure.</p>
               <div className="space-y-4">
-                {['Barcelona', 'Amsterdam', 'Rome'].map((city) => (
+                {['Barcelona', 'Amsterdam', 'Rome', 'Vancouver'].map((city) => (
                   <button
                     key={city}
                     onClick={() => selectCity(city)}
